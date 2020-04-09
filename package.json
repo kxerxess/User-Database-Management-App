@@ -1,0 +1,22 @@
+{
+    "name": "major-project",
+    "version": "1.0.0",
+    "description": "Crud app using mysql",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.0.2",
+        "express": "^4.17.1",
+        "express-myconnection": "^1.0.4",
+        "live-server": "^1.2.1",
+        "morgan": "^1.10.0",
+        "mysql": "^2.18.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}
