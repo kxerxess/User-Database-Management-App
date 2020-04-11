@@ -1,13 +1,63 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
-
-<body>
-    <h1>Write body here</h1>
-</body>
-
-</html>
+<%- include('partials/_header') -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">College Name</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data) { %>
+                            <% for (var i = 0; i < data.length; i++) { %>
+                                <tr>
+                                    <td>
+                                        <%= (i+1) %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].name %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].college_name %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].contact %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].age %>
+                                    </td>
+                                    <td>
+                                        <a href="/update/:<%= data[i].id %>" class="btn btn-success">Edit</a>
+                                        <a href="/delete/:<%= data[i].id %>" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                                <% };}; %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xl-5">
+                <form action="/save" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="college_name" placeholder="College name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="contact" placeholder="Contact" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="age" placeholder="Age" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/_footer') -%>

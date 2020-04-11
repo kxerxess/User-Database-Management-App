@@ -2,9 +2,10 @@ const express = require('express'),
     path = require('path'),
     morgan = require('morgan'),
     mysql = require('mysql'),
-    myConnection = require('express-myconnection');
+    myConnection = require('express-myconnection'),
+    ejs = require('ejs');
 
-const app = express()
+const app = express();
 
 //Importing the routes
 const studentRoutes = require('./routes/student');

@@ -1,0 +1,19 @@
+<%- include('partials/_header') -%>
+    <div class="col-xl-5 offset-md-3">
+        <form action="/update/<%= data.id %>" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" value="<%= data.name %>" placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="college_name" value="<%= data.college_name %>" placeholder="College name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="contact" value="<%= data.contact %>" placeholder="Contact" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="age" value="<%= data.age %>" placeholder="Age" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <%- include('partials/_footer') -%>
