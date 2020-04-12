@@ -14,8 +14,8 @@ Description : Creating User Management System
 
 Database Details:
 
-Database name: student_info
-Tables: student
+Database name: student_info.
+Tables: student.
 
 Field           Type                Null    Key    Default     Extra
 id              int(10) unsigned    NO      PRI    NULL        auto_increment
