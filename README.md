@@ -28,7 +28,7 @@ age             int(3) unsigned     NO             NULL
 
 Copy and paste the following commands in SQL query to create the database given above:
 
-create DATABASE studentinfo;
+create DATABASE student_info;
 create TABLE student (
   id int(10) unsigned auto_increment primary key,
   name varchar(50) not null,
