@@ -1,0 +1,6 @@
+express
+express-myconnection
+ejs
+mysql
+morgan
+path
