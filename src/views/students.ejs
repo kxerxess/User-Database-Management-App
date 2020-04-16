@@ -1,5 +1,5 @@
 <%- include('partials/_header') -%>
-<br><br>
+    <br><br>
     <div class="container">
         <div class="row">
             <div class="col-xl-7">
@@ -17,7 +17,7 @@
                     <tbody>
                         <% if (data) { %>
                             <% for (var i = 0; i < data.length; i++) { %>
-                                <tr>
+                                <tr class="tr-element">
                                     <td>
                                         <%= (i+1) %>
                                     </td>
@@ -35,13 +35,23 @@
                                     </td>
                                     <td>
                                         <a href="/update/:<%= data[i].id %>" class="btn btn-success">Edit</a>
-                                        <a href="/delete/:<%= data[i].id %>" class="btn btn-danger">Delete</a>
+                                        <a href="/delete/:<%= data[i].id %>" class="btn btn-danger del">Delete</a>
                                     </td>
                                 </tr>
                                 <% };}; %>
                     </tbody>
                 </table>
             </div>
+
+            <div id="confirm" class="hide">
+                <h1>Are you sure?</h1>
+                <h5>This action cannot be undone.</h5>
+                <div id="btn_wrap">
+                    <div id="yes" class="btn btn-success">Yes</div>
+                    <div id="no" class="btn btn-danger">No</div>
+                </div>
+            </div>
+
             <div class="col-xl-5">
                 <form action="/save" method="POST">
                     <div class="form-group">
