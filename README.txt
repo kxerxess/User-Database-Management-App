@@ -37,7 +37,9 @@ create TABLE student (
   age int(3) unsigned not null
  );
 
-
 ---------------------------------------------------------------
-=======
-forked
+
+Instructions:
+1. Create a database using above mentioned instructions.
+2. Run database on port 3306.
+3. Open 'Run App.bat' in the root directory.
