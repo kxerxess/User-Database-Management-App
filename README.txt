@@ -37,7 +37,12 @@ create TABLE student (
   age int(3) unsigned not null
  );
 
+---------------------------------------------------------------
+
+Instructions:
+1. Create a database using above mentioned instructions.
+2. Run database on port 3306.
+3. Open 'Run App.bat' from the root directory.
+4. If a browser window doesnt open automatically, opn one manaully and enter 'localhost:3000' without the quotes in the url.
 
 ---------------------------------------------------------------
-=======
-forked
